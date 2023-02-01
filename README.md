@@ -89,7 +89,7 @@ At last, split the event data according to thier timestamp.
 
 ## Pre-trained Model
 
-The pretrained model can be found in [/pretrain](pretrain/) folder.
+The pretrained model can be found in [/pretrained](pretrained/) folder.
 
 
 
