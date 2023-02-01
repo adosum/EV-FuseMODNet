@@ -55,11 +55,11 @@ The datasets are prepared in the `datasets/KITTI_MOD` folder:
             ├── images
             ├── mask
 ```
-The example dataset can be downloaded from [__**here**__](https://sites.google.com/view/fusemodnet).
+The example dataset can be downloaded from [__**here**__](https://drive.google.com/file/d/1FQPtoMHB1jL6otkhKb4omQ-RTnkJdNYJ/view?usp=share_link).
 
 
 
-## Event data encoding
+## Event data preparation
 First following instruction in [__**event camera simulator**__](https://github.com/uzh-rpg/rpg_esim) to generate the event data, the example command are.
 
 ```
