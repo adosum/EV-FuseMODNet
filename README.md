@@ -62,7 +62,9 @@ The example dataset can be downloaded from [__**here**__](https://sites.google.c
 ## Event data encoding
 First following instruction in [__**event camera simulator**__](https://github.com/uzh-rpg/rpg_esim) to generate the event data, the example command are.
 
-```python /home/user/sim_ws/src/rpg_esim/event_camera_simulator/esim_ros/scripts/generate_stamps_file.py -i "$d" -r 30```
+```
+python /home/user/sim_ws/src/rpg_esim/event_camera_simulator/esim_ros/scripts/generate_stamps_file.py -i "$d" -r 30
+```
 
 ```
         rosrun esim_ros esim_node \
@@ -96,7 +98,9 @@ The pretrained model can be found in [/pretrain](pretrain/) folder.
 
 The basic syntax is:
 
- ```python3 main.py -e --render --pretrained='checkpoint_path'``` 
+ ```
+ python main.py -e --render --pretrained='checkpoint_path'
+ ``` 
 
 ## Acknowledgments
 
