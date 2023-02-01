@@ -58,9 +58,38 @@ The datasets are prepared in the `datasets/KITTI_MOD` folder:
 The example dataset can be downloaded from [__**here**__](https://sites.google.com/view/fusemodnet).
 
 
+
+## Event data encoding
+First following instruction in [__**event camera simulator**__](https://github.com/uzh-rpg/rpg_esim) to generate the event data, the example command are.
+
+```python /home/user/sim_ws/src/rpg_esim/event_camera_simulator/esim_ros/scripts/generate_stamps_file.py -i "$d" -r 30```
+
+```
+        rosrun esim_ros esim_node \
+           --data_source=2 \
+           --path_to_output_bag="$d"/out.bag \
+           --path_to_data_folder="$d" \
+           --ros_publisher_frame_rate=60 \
+           --exposure_time_ms=10.0 \
+           --use_log_image=1 \
+           --log_eps=0.1 \
+           --contrast_threshold_pos=0.15 \
+           --contrast_threshold_neg=0.15
+```
+
+Then use the following code to extract the generated ROS bag file.
+
+```python extract_davis_bag_files.py "$d"/out.bag```
+
+At last, split the event data according to thier timestamp.
+
+```python split_coding_txt.py --save-dir "$d"```
+
 ## Pre-trained Model
 
 The pretrained model can be found in [/pretrain](pretrain/) folder.
+
+
 
 
 ## Testing with flow visualization
